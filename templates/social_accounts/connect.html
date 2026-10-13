@@ -18,21 +18,21 @@
         {% for value, label in platform_choices %}
         <div class="relative bg-white rounded-xl border border-stone-200 p-5 transition-all duration-200 {% if value in configured_platforms %}{% else %}opacity-60{% endif %}">
             <div class="flex items-start gap-4">
-                <!-- Platform icon -->
-                <div class="flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center
-                    {% if value == 'facebook' %}bg-blue-50 text-blue-600
-                    {% elif value == 'instagram' %}bg-gradient-to-br from-purple-50 to-pink-50 text-pink-600
-                    {% elif value == 'instagram_login' %}bg-gradient-to-br from-purple-50 to-pink-50 text-pink-600
-                    {% elif value == 'linkedin_personal' %}bg-blue-50 text-blue-700
-                    {% elif value == 'linkedin_company' %}bg-blue-50 text-blue-700
-                    {% elif value == 'tiktok' %}bg-stone-900 text-white
-                    {% elif value == 'youtube' %}bg-red-50 text-red-600
-                    {% elif value == 'pinterest' %}bg-red-50 text-red-500
-                    {% elif value == 'threads' %}bg-stone-100 text-stone-800
-                    {% elif value == 'bluesky' %}bg-sky-50 text-sky-500
-                    {% elif value == 'google_business' %}bg-blue-50 text-blue-500
-                    {% elif value == 'mastodon' %}bg-indigo-50 text-indigo-600
-                    {% elif value == 'devto' %}bg-stone-100 text-stone-900
+                <!-- Platform icon (vibrant brand colors) -->
+                <div class="flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center shadow-sm
+                    {% if value == 'facebook' %}bg-[#1877F2] text-white
+                    {% elif value == 'instagram' %}bg-gradient-to-br from-[#833AB4] via-[#E1306C] to-[#F77737] text-white
+                    {% elif value == 'instagram_login' %}bg-gradient-to-br from-[#833AB4] via-[#E1306C] to-[#F77737] text-white
+                    {% elif value == 'linkedin_personal' %}bg-[#0A66C2] text-white
+                    {% elif value == 'linkedin_company' %}bg-[#0A66C2] text-white
+                    {% elif value == 'tiktok' %}bg-black text-white
+                    {% elif value == 'youtube' %}bg-[#FF0000] text-white
+                    {% elif value == 'pinterest' %}bg-[#E60023] text-white
+                    {% elif value == 'threads' %}bg-black text-white
+                    {% elif value == 'bluesky' %}bg-[#0085FF] text-white
+                    {% elif value == 'google_business' %}bg-white ring-1 ring-stone-200
+                    {% elif value == 'mastodon' %}bg-[#6364FF] text-white
+                    {% elif value == 'devto' %}bg-black text-white
                     {% endif %}">
                     {% include "social_accounts/partials/_platform_icon.html" with platform=value size="5" %}
                 </div>
